@@ -1,0 +1,627 @@
+/* ---------- Images ---------- */
+/* =========================================================
+   X's & O's - Main Stylesheet
+   Day (café) colors: light blue, sunny yellow
+   Night (bar) colors: black, deep purple, lilac
+   ========================================================= */
+
+/* ---------- Whole page ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #1f2a44;
+    background-color: #ffe7c3;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+a {
+    color: #6200ff;
+}
+
+a:hover,
+a:focus {
+    color: #e2604f;
+}
+
+/* ---------- Header & navigation ---------- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 4px solid #c98fff;
+}
+
+.logo {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff9100;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #7b3fbf;
+}
+
+.nav-list {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #1f2a44;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    background-color: #d8efff;
+    color: #1f2a44;
+}
+
+/* Highlights the page you are currently on */
+.nav-list a[aria-current="page"] {
+    background-color: #faa83d;
+    color: #7b3fbf;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- Content sections ---------- */
+.intro,
+.highlights,
+.visit {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---------- Home: Guest Favorites cards ---------- */
+.card-row {
+    display: flex;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.card {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3,
+.card p {
+    padding: 0 1.25rem;
+}
+
+.card h3 {
+    margin-top: 1rem;
+}
+
+/* The night drink gets the bar colors */
+.card-night {
+    background-color: #1a1027;
+    color: #f1e6ff;
+}
+
+.card-night h3 {
+    color: #b57bff;
+}
+
+/* ---------- Home: Come Say Hi box ---------- */
+.visit {
+    background-color: #ffffff;
+    border-top: 4px solid #f9a83a;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+/* ---------- Home: day / night hero ---------- */
+.hero {
+    display: flex;
+    min-height: 420px;
+}
+
+.hero-half {
+    flex: 1;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-half h1,
+.hero-half h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-time {
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin: 0 0 0.5rem;
+}
+
+/* Day side: warm peach to orange */
+.hero-half.day {
+    background: linear-gradient(#fde5c4, #f9b35c);
+    color: #3c145f;
+}
+
+/* Night side: black to deep purple */
+.hero-half.night {
+    background: linear-gradient(#120a1f, #3c145f);
+    color: #fde5c4;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hero-half.day .button {
+    background-color: #36224a;
+    color: #fde5c4;
+}
+
+.hero-half.night .button {
+    background-color: #fde5c4;
+    color: #120a1f;
+}
+
+.hero-half.day .button:hover,
+.hero-half.night .button:hover {
+    background-color: #f9a83a;
+    color: #120a1f;
+}
+/* ---------- Footer (night colors) ---------- */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2.5rem 2rem 1rem;
+    background-color: #120a1f;
+    color: #f1e6ff;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.site-footer h2 {
+    font-size: 1.2rem;
+    color: #f9a83a;
+}
+
+.site-footer a {
+    color: #c9a3ff;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #f9a83a;
+}
+
+address {
+    font-style: normal;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid #3c145f;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ---------- About: banner ---------- */
+.page-banner {
+    padding: 3.5rem 2rem;
+    text-align: center;
+    background: linear-gradient(90deg, #fde5c4, #f9b35c 50%, #3c145f 50%, #120a1f);
+}
+
+/* Text sits in a white box so it is readable on both colors */
+.page-banner h1,
+.page-banner p {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 0.3rem 1.2rem;
+    border-radius: 4px;
+}
+
+.page-banner h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ---------- About: "On this page" links ---------- */
+.page-links ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f9b35c;
+}
+
+.page-links a {
+    font-weight: 700;
+}
+
+/* ---------- About: image + text side by side ---------- */
+.split {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.split img,
+.split div {
+    flex: 1;
+    min-width: 0;
+}
+
+.split img {
+    border-radius: 8px;
+}
+
+/* ---------- About: day vs night boxes ---------- */
+.mood-compare {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.mood-row {
+    display: flex;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.mood {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.mood.day {
+    background-color: #fde5c4;
+    border: 2px solid #f9a83a;
+}
+
+.mood.night {
+    background-color: #1a1027;
+    color: #f1e6ff;
+    border: 2px solid #7b3fbf;
+}
+
+.mood.night h3 {
+    color: #b57bff;
+}
+
+/* ---------- Menu page: shared menu styles ---------- */
+.menu-section {
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.menu-hours {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+.menu-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+    text-align: left;
+}
+
+.menu-category {
+    flex: 1;
+}
+
+.menu-category h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f9a83a;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-bottom: 1.25rem;
+}
+
+/* Item name on the left, price on the right */
+.item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.item-top h4 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.price {
+    font-weight: 700;
+    margin: 0;
+}
+
+.menu-list li p {
+    margin: 0.25rem 0 0;
+}
+
+/* ---------- Menu page: café (day) colors ---------- */
+.day-menu {
+    background-color: #ffffff;
+}
+
+.day-menu .price {
+    color: #d97f0e;
+}
+
+/* ---------- Menu page: bar (night) colors ---------- */
+.night-menu {
+    background: linear-gradient(#120a1f, #3c145f);
+    color: #f1e6ff;
+}
+
+.night-menu h3 {
+    border-bottom-color: #b57bff;
+}
+
+.night-menu .price {
+    color: #f9a83a;
+}
+
+/* ---------- Menu page: video ---------- */
+.menu-video {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fde5c4;
+}
+
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.video-row figure {
+    margin: 0;
+}
+
+.video-row video {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Contact page: two-column layout ---------- */
+.contact-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.form-box {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid #f9a83a;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    flex: 2;
+}
+
+/* ---------- Contact page: form ---------- */
+fieldset {
+    border: 1px solid #f9b35c;
+    border-radius: 8px;
+    padding: 1rem 1.5rem 1.5rem;
+    margin: 0 0 1.5rem;
+}
+
+legend {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+label,
+.radio-question {
+    display: block;
+    font-weight: 700;
+    margin: 1rem 0 0.3rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #b9b2a8;
+    border-radius: 4px;
+}
+
+/* Clear outline when a field is selected */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #f9a83a;
+    border-color: #f9a83a;
+}
+
+/* Radio buttons sit next to their labels */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.3rem 0;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: 400;
+    margin: 0;
+}
+
+button {
+    padding: 0.8rem 1.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #1f2a44;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #f9a83a;
+    color: #120a1f;
+}
+
+/* ---------- Contact page: info + map ---------- */
+.hours-list {
+    list-style: none;
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* =========================================================
+   Responsive: phones and small tablets
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* Center the logo and let the nav buttons wrap */
+    .site-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Stack every side-by-side section */
+    .hero,
+    .card-row,
+    .split,
+    .mood-row,
+    .menu-grid,
+    .video-row,
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    /* Smaller headings so they fit */
+    .hero-half h1,
+    .hero-half h2,
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+
+    /* Less padding on small screens */
+    .form-box {
+        padding: 1.25rem;
+    }
+}

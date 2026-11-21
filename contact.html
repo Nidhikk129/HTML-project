@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | X's &amp; O's</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+        <header class="site-header">
+        <a class="logo" href="index.html">X's <span>&amp;</span> O's</a>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="page-banner">
+            <h1>Vist &amp; Reserve</h1>
+            <p>Book a table for the bar
+                OR
+                Send us a note
+            </p>
+        </section>
+
+        <section class="contact-layout">
+
+            <div class="form-box">
+                <h2>Make a Reservation</h2>
+                <form action="#" method="post">
+
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Visit</legend>
+
+                        <p class="radio-question">Café or bar?</p>
+                        <div class="radio-group">
+                            <input type="radio" id="visit-cafe" name="visit" value="cafe" checked>
+                            <label for="visit-cafe">Café (7 AM &ndash; 4 PM)</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="visit-bar" name="visit" value="bar">
+                            <label for="visit-bar">Bar (6 PM &ndash; 1 AM)</label>
+                        </div>
+
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+
+                        <label for="guests">Number of guests</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6+</option>
+                        </select>
+
+                        <label for="notes">Special requests (optional)</label>
+                        <textarea id="notes" name="notes" rows="4"></textarea>
+                    </fieldset>
+
+                    <button type="submit">Request Reservation</button>
+
+                </form>
+            </div>
+            
+            <div class="info-box">
+                <h2>Find Us</h2>
+                <address>
+                    123 Sunset Lane<br>
+                    San Diego, CA 92101<br>
+                    <a href="tel:+16195550123">(619) 555-0123</a><br>
+                    <a href="mailto:hello@xsandos.com">hello@xsandos.com</a>
+                </address>
+
+                <h3>Hours</h3>
+                <ul class="hours-list">
+                    <li><strong>Café:</strong> 7 AM &ndash; 4 PM daily</li>
+                    <li><strong>Bar:</strong> 6 PM &ndash; 1 AM daily</li>
+                </ul>
+
+                <div class="map">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Gaslamp%20Quarter%2C%20San%20Diego%2C%20CA&output=embed"
+                        title="Map showing X's &amp; O's location in San Diego"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Gaslamp+Quarter+San+Diego" target="_blank" rel="noopener">Get directions on Google Maps</a>
+                </p>
+            </div>
+
+        </section>
+
+       
+
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-col">
+            <h2>X's &amp; O's</h2>
+            <address>
+                123 Sunset Lane<br>
+                San Diego, CA 92101<br>
+                <a href="tel:+16195550123">(619) 555-0123</a>
+            </address>
+        </div>
+        <div class="footer-col">
+            <h2>Hours</h2>
+            <p>Café: 7 AM &ndash; 4 PM<br>Bar: 6 PM &ndash; 1 AM</p>
+        </div>
+        <div class="footer-col">
+            <h2>Follow Us</h2>
+            <ul class="footer-links">
+                <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.yelp.com" target="_blank" rel="noopener">Yelp</a></li>
+            </ul>
+        </div>
+        <p class="footer-bottom">
+            &copy; 2026 X's &amp; O's (a fictional restaurant for CSE-41207).
+            <a href="#top">Back to top &uarr;</a>
+        </p>
+    </footer>
+
+    
+
+</body>
+</html>
